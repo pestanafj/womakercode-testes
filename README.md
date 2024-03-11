@@ -3,9 +3,11 @@
 Realizar os cursos:
 
 1. Introdução a testes no Python (Desafio 5)
+
 https://learn.microsoft.com/pt-br/training/modules/python-get-started-testing/
 
 2. Fazer testes com Pytest (Desafio 5)
+   
 https://learn.microsoft.com/pt-br/training/modules/test-python-with-pytest/
 
 3. Teste Avançado com Pytest (Desafio 5)
