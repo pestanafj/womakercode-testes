@@ -1,0 +1,26 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.3, pluggy-1.3.0
+rootdir: /mnt/c/Users/DELL/Documents/2024.1/BOOTCAMP/TESTESS/womakerscode-testes/2. Fazer testes com o Pytest
+plugins: anyio-4.0.0
+collected 2 items
+
+test_exercise.py .F                                                      [100%]
+
+=================================== FAILURES ===================================
+__________________________ TestAdminCommand.test_sudo __________________________
+
+self = <test_exercise.TestAdminCommand object at 0x7fc0bf202da0>
+
+    def test_sudo(self):
+        result = admin_command(self.command(), sudo=True)
+        expected = ["sudo"] + self.command()
+>       assert result == expected
+E       AssertionError: assert ['ps', 'aux'] == ['sudo', 'ps', 'aux']
+E         At index 0 diff: 'ps' != 'sudo'
+E         Right contains one more item: 'aux'
+E         Use -v to get more diff
+
+test_exercise.py:18: AssertionError
+=========================== short test summary info ============================
+FAILED test_exercise.py::TestAdminCommand::test_sudo - AssertionError: assert...
+========================= 1 failed, 1 passed in 0.12s ==========================
