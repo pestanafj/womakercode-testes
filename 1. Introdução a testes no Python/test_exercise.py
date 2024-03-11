@@ -1,6 +1,6 @@
 import unittest
 
-#Etapa 1:
+"""#Etapa 1:
 def str_to_bool(value):
     true_values = ['y','yes']
     false_values = ['no', 'n']
@@ -22,7 +22,7 @@ class TestStrToBool(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
+"""
 
 
 #Etapa 2 -- erro apresentado:
@@ -42,5 +42,17 @@ def str_to_bool(value):
     if value in false_values:
         return False
 
+class TestStrToBool(unittest.TestCase):
+
+    def test_y_is_true(self):
+        result = str_to_bool('y')
+        self.assertTrue(result)
+
+    def test_yes_is_true(self):
+        result = str_to_bool('Yes')
+        self.assertTrue(result)
+
+if __name__ == '__main__':
+    unittest.main()
 
 
